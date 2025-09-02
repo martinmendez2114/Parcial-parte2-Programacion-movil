@@ -1,0 +1,17 @@
+Descripción: Como usuario registrado, quiero iniciar sesión en la aplicación, para acceder a las funcionalidades de control de vehículos.
+Prioridad: Alta
+Criterios de aceptación (Gherkin):
+Feature: Inicio de sesión
+
+  Scenario: Inicio de sesión exitoso
+    Given: que el usuario está en la pantalla de inicio de sesión
+    And: el usuario tiene una cuenta registrada
+    When: el usuario ingresa su usuario y contraseña válidos
+    Then: el sistema debe redirigirlo al menú principal
+    And mostrar un mensaje de "Bienvenido"
+
+  Scenario: Inicio de sesión fallido
+    Given: que el usuario está en la pantalla de inicio de sesión
+    When: el usuario ingresa un usuario o contraseña incorrectos
+    Then: el sistema debe mostrar un mensaje de error
+    And no permitir el acceso a la aplicación
