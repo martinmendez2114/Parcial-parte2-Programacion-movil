@@ -1,0 +1,16 @@
+Descripción: Como usuario, quiero registrar mi vehículo, para poder gestionarlo en el sistema.
+Prioridad: Alta
+Criterios de aceptación (Gherkin):
+Feature: Registro de vehículo
+
+  Scenario: Registro exitoso
+    Given: que el usuario está logueado en la aplicación
+    When: ingresa los datos del vehículo (placa, modelo, año)
+    Then: el sistema debe guardar el vehículo
+    And mostrar el mensaje "Vehículo registrado con éxito"
+
+  Scenario: Registro incompleto
+    Given: que el usuario está en el formulario de registro de vehículo
+    When: omite un campo obligatorio
+    Then: el sistema debe mostrar un mensaje de error
+    And no permitir guardar el vehículo
