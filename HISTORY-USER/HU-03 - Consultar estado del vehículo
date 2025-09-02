@@ -1,0 +1,14 @@
+Descripción: Como usuario, quiero consultar el estado de mi vehículo, para conocer si está disponible o en uso.
+Prioridad: Alta
+Criterios de aceptación (Gherkin):
+Feature: Consulta de estado del vehículo
+
+  Scenario: Vehículo disponible
+    Given: que el usuario está logueado en la aplicación
+    When: consulta el estado de su vehículo
+    Then: el sistema debe mostrar "Disponible"
+
+  Scenario: Vehículo en uso
+    Given: que el usuario está logueado en la aplicación
+    When: consulta el estado de su vehículo asignado a un conductor
+    Then: el sistema debe mostrar "En uso" 
