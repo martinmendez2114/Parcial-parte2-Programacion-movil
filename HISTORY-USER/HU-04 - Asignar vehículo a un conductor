@@ -1,0 +1,15 @@
+Descripción: Como administrador, quiero asignar un vehículo a un conductor, para gestionar su uso en el sistema.
+Prioridad: Media
+Criterios de aceptación (Gherkin):
+Feature: Asignación de vehículo a conductor
+
+  Scenario: Asignación exitosa
+    Given: que el administrador está logueado en la aplicación
+    When: selecciona un vehículo y un conductor disponibles
+    Then: el sistema debe asignar el vehículo al conductor
+    And mostrar el mensaje "Asignación exitosa"
+
+  Scenario: Asignación inválida
+    Given: que el administrador intenta asignar un vehículo ya en uso
+    When: selecciona un conductor
+    Then: el sistema debe mostrar un mensaje "El vehículo no está disponible" 
