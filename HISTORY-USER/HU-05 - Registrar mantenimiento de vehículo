@@ -1,0 +1,14 @@
+Descripción: Como administrador, quiero registrar el mantenimiento de un vehículo, para llevar un control histórico.
+Prioridad: Media
+Criterios de aceptación (Gherkin):
+Feature: Registro de mantenimiento
+
+  Scenario: Mantenimiento registrado
+    Given: que el administrador está logueado en la aplicación
+    When: ingresa los datos de mantenimiento (fecha, descripción, costo)
+    Then: el sistema debe guardar el mantenimiento
+    And mostrar "Mantenimiento registrado correctamente"
+
+  Scenario: Registro incompleto
+    Given: que el administrador intenta registrar un mantenimiento sin fecha
+    Then: el sistema debe mostrar un mensaje de error
