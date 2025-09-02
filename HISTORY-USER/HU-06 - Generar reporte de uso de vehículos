@@ -1,0 +1,13 @@
+Descripción: Como administrador, quiero generar un reporte de uso de vehículos, para conocer la utilización en un periodo de tiempo.
+Prioridad: Baja
+Criterios de aceptación (Gherkin):
+Feature: Generación de reporte de uso
+
+  Scenario: Reporte generado correctamente
+    Given: que el administrador está logueado en la aplicación
+    When: selecciona un rango de fechas válido
+    Then: el sistema debe mostrar un reporte con la información de uso
+
+  Scenario: Rango inválido
+    Given: que el administrador intenta generar un reporte con fechas inválidas
+    Then: el sistema debe mostrar un mensaje de error
